@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_glow/flutter_glow.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:feki_prtfolio_v2/constants/colors.dart';
+
+class FooterWidgetMobile extends StatelessWidget {
+  const FooterWidgetMobile({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Designed And Developed By",
+          style: GoogleFonts.nunito(
+              fontSize: 9.sp, fontWeight: FontWeight.w400, color: whiteLight),
+        ),
+        SizedBox(width: 5.w),
+        GlowText(
+          "Abdelrahman Elfeki",
+          style: GoogleFonts.nunito(
+              fontSize: 9.sp, fontWeight: FontWeight.w600, color: blueColor),
+        )
+      ],
+    );
+  }
+}
